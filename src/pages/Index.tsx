@@ -1,13 +1,42 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Helmet } from "react-helmet-async";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import FeaturesSection from "@/components/FeaturesSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import RoadmapSection from "@/components/RoadmapSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <>
+      <Helmet>
+        <title>ArbiterX – Cross-Chain Wallet & Instant Swap Protocol</title>
+        <meta
+          name="description"
+          content="Send, receive, and swap cryptocurrencies across multiple blockchains seamlessly. Experience gasless transactions with ArbiterX's next-generation cross-chain wallet."
+        />
+        <meta property="og:title" content="ArbiterX – Cross-Chain Wallet & Instant Swap" />
+        <meta
+          property="og:description"
+          content="The next-generation cross-chain wallet and instant swap platform. Move assets across ETH, BNB, SOL, and more with 0.1% fees."
+        />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://arbiterx.io" />
+      </Helmet>
+
+      <div className="min-h-screen bg-background">
+        <Navbar />
+        <main>
+          <HeroSection />
+          <AboutSection />
+          <FeaturesSection />
+          <HowItWorksSection />
+          <RoadmapSection />
+        </main>
+        <Footer />
       </div>
-    </div>
+    </>
   );
 };
 
