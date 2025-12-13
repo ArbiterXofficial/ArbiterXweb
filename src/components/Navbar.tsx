@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Wallet } from "lucide-react";
 
@@ -60,10 +61,12 @@ const Navbar = () => {
             <Button variant="ghost" size="sm" className="text-muted-foreground">
               Documentation
             </Button>
-            <Button variant="hero" size="default" className="gap-2">
-              <Wallet className="w-4 h-4" />
-              Launch App
-            </Button>
+            <Link to="/dashboard">
+              <Button variant="hero" size="default" className="gap-2">
+                <Wallet className="w-4 h-4" />
+                Launch App
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -90,10 +93,12 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <Button variant="hero" className="mt-4 gap-2">
-              <Wallet className="w-4 h-4" />
-              Launch App
-            </Button>
+            <Link to="/dashboard" onClick={() => setIsMobileMenuOpen(false)}>
+              <Button variant="hero" className="mt-4 gap-2 w-full">
+                <Wallet className="w-4 h-4" />
+                Launch App
+              </Button>
+            </Link>
           </div>
         </div>
       )}
