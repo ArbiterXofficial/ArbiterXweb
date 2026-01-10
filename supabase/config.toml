@@ -1,1 +1,4 @@
 project_id = "mpdvgamlyxyxnetfufki"
+
+[functions.cross-chain-swap]
+verify_jwt = false
