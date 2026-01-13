@@ -51,6 +51,9 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+  
+## Credits
+Initial frontend scaffold generated using Lovable AI, further developed and maintained by the ArbiterX team.
 
 ## Contributors
 - ArbiterX Team
